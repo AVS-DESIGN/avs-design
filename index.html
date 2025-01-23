@@ -44,17 +44,18 @@
 
         header .logo {
             font-size: 1.5rem;
+            line-height: 1.5rem;
             font-family: 'HeaderFont', Arial, sans-serif;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             display: flex;
             align-items: center;
         }
 
         header .logo img {
             height: 24px;
-            margin-right: 10px;
+            margin-right:20px;
         }
 
         header nav ul {
@@ -63,19 +64,22 @@
         }
 
         header nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         header nav ul li a {
-            text-decoration: none;
-            color: #000;
-            font-size: 1rem;
-            font-family: 'BodyFont', Arial, sans-serif;
-            transition: color 0.3s ease;
+         text-decoration: none;
+         color: #000;
+         font-size: 1rem;
+         font-family: 'BodyFont', Arial, sans-serif;
+         font-weight: 300; /* Normal weight */
+         transition: color 0.3s ease, font-weight 0.3s ease; /* Smooth transition */
         }
 
         header nav ul li a:hover {
-            color: #555;
+            color: #000000;
+            font-weight: 800; /* Slightly bolder weight */
+            text-shadow: 0.3px 0.3px 0 #000;
         }
 
         .hero {
@@ -85,19 +89,20 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background-color: #f9f9f9;
+            background-color: #f6f6f6;
         }
 
         .hero h1 {
             font-size: 3rem;
             font-family: 'HeaderFont', Arial, sans-serif;
-            margin-bottom: 20px;
+            line-height: 3rem;
+            margin-bottom: 40px;
         }
 
         .hero p {
             font-size: 1.25rem;
             font-family: 'BodyFont', Arial, sans-serif;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .hero a {
