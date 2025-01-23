@@ -33,6 +33,13 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 24px;
+            margin-right: 10px;
         }
 
         header nav ul {
@@ -52,7 +59,7 @@
         }
 
         header nav ul li a:hover {
-            color: #8e8d8d;
+            color: #555;
         }
 
         .hero {
@@ -62,7 +69,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background-color: #fafafa;
+            background-color: #f9f9f9;
         }
 
         .hero h1 {
@@ -130,7 +137,10 @@
 </head>
 <body>
     <header>
-        <div class="logo">AVS DESIGN</div>
+        <div class="logo">
+            <img src="images/avs-logo.png" alt="Logo">
+            AVS DESIGN
+        </div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -141,8 +151,8 @@
     </header>
 
     <section class="hero">
-        <h1>Design Solutions</h1>
-        <p>Think Outside the Box.</p>
+        <h1>Think Outside the Box.</h1>
+        <p>_My Take on Design</p>
         <a href="#projects">View Projects</a>
     </section>
 
@@ -158,7 +168,7 @@
 
     <section class="section" id="contact">
         <h2>Contact</h2>
-        <p>We’d love to hear from you! Whether it’s a collaboration, inquiry, or feedback, feel free to reach out.</p>
+        <p>contact@avs-design.de</p>
     </section>
 
     <footer>
