@@ -38,11 +38,6 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            cursor: url('images/avs-cursor-black.png'), auto;
-        }
-
-        a:hover, button:hover {
-            cursor: url('images/avs-cursor-white.png'), auto;
         }
 
         header {
@@ -55,7 +50,6 @@
 
         header .logo {
             font-size: 1.5rem;
-            line-height: 1.5rem;
             font-family: 'HeaderFont', Arial, sans-serif;
             font-weight: bold;
             text-transform: uppercase;
@@ -82,13 +76,11 @@
             text-decoration: none;
             color: #000;
             font-size: 1rem;
-            font-family: 'BodyFont', Arial, sans-serif;
-            font-weight: 300;
             transition: color 0.3s ease, font-weight 0.3s ease;
         }
 
         header nav ul li a:hover {
-            color: #000000;
+            color: #000;
             font-weight: 800;
             text-shadow: 0.3px 0.3px 0 #000;
         }
@@ -106,13 +98,11 @@
         .hero h1 {
             font-size: 3rem;
             font-family: 'HeaderFont', Arial, sans-serif;
-            line-height: 3rem;
             margin-bottom: 40px;
         }
 
         .hero p {
             font-size: 1.25rem;
-            font-family: 'BodyFont', Arial, sans-serif;
             margin-bottom: 40px;
         }
 
@@ -126,15 +116,12 @@
             color: #000;
             font-size: 1rem;
             font-weight: bold;
-            font-family: 'BodyFont', Arial, sans-serif;
             transition: background-color 0.4s ease, color 0.4s ease;
         }
 
         .hero a:hover {
             background-color: #000;
             color: #fff;
-            margin-top: 40px;
-            padding: 5px 15px;
         }
 
         .section {
@@ -150,8 +137,50 @@
 
         .section p {
             font-size: 1rem;
-            font-family: 'BodyFont', Arial, sans-serif;
             margin-bottom: 20px;
+        }
+
+        #projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin-top: 40px;
+        }
+
+        .project-block {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-block .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'HeaderFont', Arial, sans-serif;
+            font-size: 1.5rem;
+            transition: opacity 0.4s ease;
+        }
+
+        .project-block:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-block:hover .overlay {
+            opacity: 0;
         }
 
         footer {
@@ -163,7 +192,6 @@
 
         footer p {
             font-size: 0.9rem;
-            font-family: 'BodyFont', Arial, sans-serif;
         }
 
         footer a {
@@ -175,78 +203,7 @@
         footer a:hover {
             text-decoration: underline;
         }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 20px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        header nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            flex-direction: row; /* Default horizontal layout PC*/
-        }
-
-        header nav ul li {
-            margin: 0 20px;
-        }
-
-        /* Mobile-specific styles */
-        @media screen and (max-width: 768px) {
-            header nav ul {
-                flex-direction: column; /* Stack links vertically */
-                align-items: flex-end; /* Keep links aligned to the right */
-                width: 100%; /* Let the menu take full width */
-            }
-            header nav ul li {
-                margin: 10px 0; /* Add space between links in column layout */
-            }
-        }
-
-
-        .hero {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            line-height: 2.5rem;
-        }
-
-        .hero p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .hero a {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-        }
-
-        .section {
-            padding: 30px 20px;
-        }
-
-        .section h2 {
-            font-size: 1.5rem;
-        }
-
-        .section p {
-            font-size: 0.9rem;
-        }
-
-        footer {
-            padding: 10px 20px;
-        }
-        }
     </style>
-
 </head>
 <body>
     <header>
@@ -256,9 +213,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About_</a></li>
+                <li><a href="#projects">Projects_</a></li>
+                <li><a href="#contact">Contact_</a></li>
             </ul>
         </nav>
     </header>
@@ -277,6 +234,32 @@
     <section class="section" id="projects">
         <h2>Projects</h2>
         <p>Explore my projects, which range from product design to visual computing and freelance collaborations. Each piece reflects my commitment to creating meaningful designs that enhance everyday experiences.</p>
+        <div id="projects-grid">
+            <div class="project-block">
+                <img src="images/product-design.jpg" alt="Product Design">
+                <div class="overlay">Product Design</div>
+            </div>
+            <div class="project-block">
+                <img src="images/digital-design.jpg" alt="Digital Design">
+                <div class="overlay">Digital Design</div>
+            </div>
+            <div class="project-block">
+                <img src="images/prototyping.jpg" alt="Prototyping">
+                <div class="overlay">Prototyping</div>
+            </div>
+            <div class="project-block">
+                <img src="images/workshops.jpg" alt="Workshops">
+                <div class="overlay">Workshops</div>
+            </div>
+            <div class="project-block">
+                <img src="images/coming-soon.jpg" alt="Coming Soon">
+                <div class="overlay">Coming Soon</div>
+            </div>
+            <div class="project-block">
+                <img src="images/coming-soon.jpg" alt="Coming Soon">
+                <div class="overlay">Coming Soon</div>
+            </div>
+        </div>
     </section>
 
     <section class="section" id="contact">
