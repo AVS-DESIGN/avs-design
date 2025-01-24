@@ -65,8 +65,8 @@
         }
 
         header .logo img {
-            height: 24px;
-            margin-right: 20px;
+            height: 20px;
+            margin-right: 30px;
         }
 
         header nav ul {
@@ -118,6 +118,7 @@
 
         .hero a {
             display: inline-block;
+            margin-top: 30px;
             padding: 10px 30px;
             border: 2px solid #000;
             border-radius: 50px;
@@ -126,12 +127,14 @@
             font-size: 1rem;
             font-weight: bold;
             font-family: 'BodyFont', Arial, sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.4s ease, color 0.4s ease;
         }
 
         .hero a:hover {
             background-color: #000;
             color: #fff;
+            margin-top: 40px;
+            padding: 5px 15px;
         }
 
         .section {
@@ -173,66 +176,77 @@
             text-decoration: underline;
         }
 
-        /* Responsive Design for Mobile */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 20px;
-            }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+            border-bottom: 1px solid #ccc;
+        }
 
-            header .logo {
-                font-size: 1.2rem;
-                margin-bottom: 10px;
-            }
+        header nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-direction: row; /* Default horizontal layout PC*/
+        }
 
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        /* Mobile-specific styles */
+        @media screen and (max-width: 768px) {
             header nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-                margin-top: 10px;
+                flex-direction: column; /* Stack links vertically */
+                align-items: flex-end; /* Keep links aligned to the right */
+                width: 100%; /* Let the menu take full width */
             }
-
             header nav ul li {
-                margin: 10px 0;
-            }
-
-            .hero {
-                padding: 20px;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-                line-height: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 20px;
-            }
-
-            .hero a {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-
-            .section {
-                padding: 30px 20px;
-            }
-
-            .section h2 {
-                font-size: 1.5rem;
-            }
-
-            .section p {
-                font-size: 0.9rem;
-            }
-
-            footer {
-                padding: 10px 20px;
+                margin: 10px 0; /* Add space between links in column layout */
             }
         }
+
+
+        .hero {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .section {
+            padding: 30px 20px;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+        }
+
+        .section p {
+            font-size: 0.9rem;
+        }
+
+        footer {
+            padding: 10px 20px;
+        }
+        }
     </style>
+
 </head>
 <body>
     <header>
