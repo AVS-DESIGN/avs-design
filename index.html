@@ -50,7 +50,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 20px 20px;
             border-bottom: 1px solid #ccc;
         }
 
@@ -60,6 +60,7 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1.5px;
+            line-height: 1.5rem;
             display: flex;
             align-items: center;
         }
@@ -69,14 +70,32 @@
             margin-right: 30px;
         }
 
+
+
         header nav ul {
             display: flex;
             list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-direction: row; /* Default horizontal layout PC*/
         }
 
         header nav ul li {
             margin: 0 20px;
         }
+
+        /* Mobile-specific styles */
+        @media screen and (max-width: 768px) {
+            header nav ul {
+                flex-direction: column; /* Stack links vertically */
+                align-items: flex-end; /* Keep links aligned to the right */
+                width: 100%; /* Let the menu take full width */
+            }
+            header nav ul li {
+                margin: 10px 0; /* Add space between links in column layout */
+            }
+        }
+
 
         header nav ul li a {
             text-decoration: none;
