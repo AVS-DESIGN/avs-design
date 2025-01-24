@@ -70,32 +70,14 @@
             margin-right: 30px;
         }
 
-
-
         header nav ul {
             display: flex;
             list-style: none;
-            margin: 0;
-            padding: 0;
-            flex-direction: row; /* Default horizontal layout PC*/
         }
 
         header nav ul li {
             margin: 0 20px;
         }
-
-        /* Mobile-specific styles */
-        @media screen and (max-width: 768px) {
-            header nav ul {
-                flex-direction: column; /* Stack links vertically */
-                align-items: flex-end; /* Keep links aligned to the right */
-                width: 100%; /* Let the menu take full width */
-            }
-            header nav ul li {
-                margin: 10px 0; /* Add space between links in column layout */
-            }
-        }
-
 
         header nav ul li a {
             text-decoration: none;
@@ -167,19 +149,23 @@
 
         #projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
             margin-top: 40px;
-            padding: 0;
         }
 
+        /* Maintain 16:9 aspect ratio for grid blocks */
         .project-block {
             position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
             overflow: hidden;
-            padding: 0;
         }
 
         .project-block img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -211,6 +197,13 @@
             opacity: 0;
         }
 
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            #projects-grid {
+                grid-template-columns: 1fr; /* Stack blocks in 1 column */
+            }
+        }
+
         footer {
             padding: 20px 40px;
             text-align: center;
@@ -233,6 +226,8 @@
         }
     </style>
 </head>
+
+
 <body>
     <header>
         <div class="logo">
