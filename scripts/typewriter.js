@@ -1,10 +1,7 @@
-// Typewriter Effect JavaScript
-function typewriterEffect(elementId, text, speed) {
+function typewriterEffect(elementId, typingSpeed = 100) {
     const element = document.getElementById(elementId);
-    if (!element) {
-        console.error(`Element with ID '${elementId}' not found.`);
-        return;
-    }
+    const text = element.textContent.trim(); // Use the existing text in the element
+    element.textContent = ""; // Clear the content to start the animation
 
     let index = 0;
 
@@ -12,7 +9,7 @@ function typewriterEffect(elementId, text, speed) {
         if (index < text.length) {
             element.textContent += text.charAt(index);
             index++;
-            setTimeout(type, speed);
+            setTimeout(type, typingSpeed);
         }
     }
 
