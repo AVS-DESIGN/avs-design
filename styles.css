@@ -59,10 +59,22 @@ header .logo {
     align-items: center;
 }
 
-header .logo img {
-    height: 20px;
-    margin-right: 30px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0; /* Adjust spacing between the image and the text */
 }
+
+.logo a {
+    display: inline-block; /* Restrict the clickable area to the image only */
+    text-decoration: none;
+}
+
+.logo img {
+    height: 20px; /* Adjust image size as needed */
+    margin: 10px; /* Ensure no extra space around the image */
+}
+
 
 header nav ul {
     display: flex;
