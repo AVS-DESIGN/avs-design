@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
@@ -14,6 +15,8 @@
 </head>
 
 <body>
+
+     <!-- MENU -->
     <header>
         <div class="logo">
             <img src="images/avs-logo.png" alt="Logo">
@@ -28,22 +31,25 @@
         </nav>
     </header>
 
+     <!-- WELCOME -->
     <section class="hero">
         <h1>Think Outside the Box.</h1>
         <p>_My Take on Design</p>
         <a href="#projects">View Projects</a>
     </section>
 
-    <section class="section" id="about">
+    <!-- SECTION About -->
+     <section class="section" id="about">
         <h2>About</h2>
         <p>I’m a product design student at HfG Offenbach with a background in visual computing. With several years of freelance design experience, I combine technical expertise with creativity to develop thoughtful, user-centered designs. My portfolio showcases work that reflects my passion for innovation and detail.</p>
     </section>
-
+    
+    <!-- SECTION Projects -->
     <section class="section" id="projects">
         <h2>Projects</h2>
         <p>Explore my projects, which range from product design to visual computing and freelance collaborations. Each piece reflects my commitment to creating meaningful designs that enhance everyday experiences.</p>
         
-        <!-- Tabs Navigation -->
+        <!-- TABS -->
          <div class="tabs-menu">
             <ul>
             <li><a class="tab-button active" data-tab="highlights">_Highlights</a></li>
@@ -55,86 +61,129 @@
         </div>
         
 
-        <!-- Tab Highlights -->
+        <!-- TAB Highlights -->
          <div class="tab-content" id="highlights" style="display: grid;">
+
             <!-- Grid -->
-            <!-- Highlight 1 -->
-             <div class="project-block">
-                <img src="images/product-design.jpg" alt="Product Design: Inline Table Lamp">
-                <div class="overlay">Inline</div>
-            </div>
+             <div id="projects-grid">
+
+                <!-- Highlight 1 -->
+                <div class="project-block">
+                    <img src="images/product-design.jpg" alt="Product Design: Inline Table Lamp">
+                    <div class="overlay">Inline</div>
+                </div>
              <!-- Highlight 2 -->
-            <div class="project-block">
-                <img src="images/urban-design.jpg" alt="Urban Design: Flava">
-                <div class="overlay">Flava</div>
+                <div class="project-block">
+                    <img src="images/urban-design.jpg" alt="Urban Design: Flava">
+                    <div class="overlay">Flava</div>
+                </div>
+                <!-- Add more -->
+
             </div>
-            <!-- Add more -->
         </div>
         
+        
+        <!-- TAB Product Design -->
+         <div class="tab-content" id="product-design" style="display: none;">
 
-        <!-- Tab Product Design -->
-        <div class="tab-content" id="product-design" style="display: none;">
             <!-- Grid -->
-            <!-- Product Design 1-->
-             <div class="project-block">
-                <img src="images/product-design.jpg" alt="Product Design 1">
-                <div class="overlay">Product Design 1</div>
+            <div id="projects-grid">
+
+                <!-- Product Design 1-->
+                <div class="project-block">
+                    <img src="images/product-design.jpg" alt="Product Design 1">
+                    <div class="overlay">Product Design 1</div>
+                </div>
+                <!-- Product Design 2-->
+                <div class="project-block">
+                    <img src="images/product-design-2.jpg" alt="Product Design 2">
+                    <div class="overlay">Product Design 2</div>
+                </div>
+                <!-- Add more -->
+
             </div>
-            <!-- Add more -->
-        </div>
+         </div>
         
 
-        <!-- Tab Urban Design -->
+        <!-- TAB Urban Design -->
         <div class="tab-content" id="urban-design" style="display: none;">
+
             <!-- Grid -->
-            <!-- Urban Design 1-->
-             <div class="project-block">
-                <img src="images/urban-design.jpg" alt="Urban Design 1">
-                <div class="overlay">Urban Design 1</div>
-            </div><!-- Add more -->
-        </div>
-        
-        
-        
-        <!-- Tab Digital Design -->
-        <div class="tab-content" id="digital-design" style="display: none;">
-            <!-- Grid -->
-            <!-- Digital Design 1-->
-             <div class="project-block">
-                <img src="images/digital-design.gif" alt="Digital Design 1">
-                <div class="overlay">Digital Design 1</div>
+            <div id="projects-grid">
+                
+                <!-- Urban Design 1-->
+                 <div class="project-block">
+                    <img src="images/urban-design.jpg" alt="Urban Design 1">
+                    <div class="overlay">Urban Design 1</div>
+                </div>
+                <!-- Urban Design 2-->
+                <div class="project-block">
+                    <img src="images/urban-design-2.jpg" alt="Urban Design 2">
+                    <div class="overlay">Urban Design 2</div>
+                </div>
+                <!-- Add more -->
+
             </div>
-            <!-- Add more -->
         </div>
         
         
-        <!-- Tab Workshops -->
+        <!-- TAB Digital Design -->
+        <div class="tab-content" id="digital-design" style="display: none;">
+
+            <!-- Grid -->
+            <div id="projects-grid">
+                <!-- Digital Design 1-->
+                 <div class="project-block">
+                    <img src="images/digital-design.gif" alt="Digital Design 1">
+                    <div class="overlay">Digital Design 1</div>
+                </div>
+                <!-- Digital Design 2-->
+                <div class="project-block">
+                    <img src="images/digital-design-2.jpg" alt="Digital Design 2">
+                    <div class="overlay">Digital Design 2</div>
+                </div>
+                <!-- Add more -->
+
+            </div>
+        </div>
+        
+        
+        <!-- TAB Workshops -->
         <div class="tab-content" id="workshops" style="display: none;">
             <!-- Grid -->
-            <!-- Workshop 1-->
-             <div class="project-block">
-                <img src="images/workshops.jpg" alt="Workshops 1">
-                <div class="overlay">Workshops 1</div>
+            <div id="projects-grid">
+                <!-- Workshop 1-->
+                 <div class="project-block">
+                    <img src="images/workshops.jpg" alt="Workshops 1">
+                    <div class="overlay">Workshops 1</div>
+                </div>
+                <!-- Workshop 2-->
+                <div class="project-block">
+                    <img src="images/workshops-2.jpg" alt="Workshops 2">
+                    <div class="overlay">Workshops 2</div>
+                </div>
+                <!-- Add more -->
+
             </div>
-            <!-- Add more blocks as needed -->
         </div>
         
     </section>
 
-    
+
+     <!-- SECTION Contact -->
     <section class="section" id="contact">
         <h2>Contact</h2>
         <p>contact@avs-design.de</p>
     </section>
 
+     <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 AVS DESIGN. All Rights Reserved. | <a href="privacy-policy.html" target="_blank">Privacy Policy</a></p>
     </footer>
 
-    
+    <!-- Javascript -->
     <script src="tabs.js"></script>
-
-
-    
+ 
 </body>
+
 </html>
