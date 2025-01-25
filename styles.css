@@ -154,7 +154,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center; /* Center the tabs */
     list-style: none;
-    margin: 50px 0; /* Add spacing above and below */
+    margin: 80px 0 40px 0; /* Add spacing above and below */
     padding: 0;
 }
 
@@ -164,11 +164,11 @@ header nav ul li a:hover {
 
 .tabs-menu ul li a {
     text-decoration: none;
-    font-family: 'HeaderFont', Arial, sans-serif;
+    font-family: 'BodyFont', Arial, sans-serif;
     color: #000;
     font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: normal;
+    text-transform: none;
     letter-spacing: 1.5px;
     line-height: 1rem;
     display: flex;
@@ -185,7 +185,8 @@ header nav ul li a:hover {
 .tabs-menu ul li a.active {
     font-weight: bold; /* Keep bold for active tab */
     text-shadow: 0.3px 0.3px 0 #000;
-    text-decoration: underline; /* Underline the active tab */
+    text-decoration: none;
+    text-transform: none;
 }
 
 
