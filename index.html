@@ -34,10 +34,11 @@
         </nav>
     </header>
 
+
      <!-- WELCOME -->
     <section class="hero">
         <h1>Think Outside the Box.</h1>
-        <p>_My Take on Design</p>
+        <p id="typewriter">_</p>
         <button href="#projects">View Projects</button>
     </section>
 
@@ -166,7 +167,7 @@
         </div>
         
     </section>
-    
+
 
     <!-- SECTION About -->
     <section class="section" id="about">
@@ -187,7 +188,15 @@
     </footer>
 
     <!-- Javascript -->
+    <script src="/scripts/typewriter.js"></script>
+    
+    <script>
+    // Call the typewriter effect on the desired element
+    typewriterEffect("typewriter", "My Take on Design.", 100);
+    </script>
+
     <script src="tabs.js"></script>
+
  
 </body>
 
