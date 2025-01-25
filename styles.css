@@ -148,6 +148,40 @@ header nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+
+.tabs-menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 20px 0; /* Adjust for spacing above/below the tabs */
+    padding: 0;
+}
+
+.tabs-menu ul li {
+    margin: 0 10px; /* Adjust spacing between tabs */
+}
+
+.tabs-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.tabs-menu ul li a:hover {
+    color: #000;
+    font-weight: 800;
+    text-shadow: 0.3px 0.3px 0 #000;
+}
+
+.tabs-menu ul li a.active {
+    font-weight: bold;
+    color: #000;
+    text-shadow: 0.5px 0.5px 0 #000;
+    border-bottom: 2px solid #000; /* Optional: Highlight active tab */
+}
+
+
 #projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.tab');
+    const tabs = document.querySelectorAll('.tabs-menu .tab');
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent page refresh
             // Remove active class from all tabs and hide content
             tabs.forEach((tab) => tab.classList.remove('active'));
             tabContents.forEach((content) => content.style.display = 'none');
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Set default tab as active
-    const defaultTab = document.querySelector('.tab.active');
+    const defaultTab = document.querySelector('.tabs-menu .tab.active');
     if (defaultTab) {
         document.querySelector(`#${defaultTab.dataset.target}`).style.display = 'grid';
     }
