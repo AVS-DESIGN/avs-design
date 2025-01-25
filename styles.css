@@ -149,37 +149,40 @@ header nav ul li a:hover {
 }
 
 
+
 .tabs-menu ul {
     display: flex;
+    justify-content: center; /* Center the tabs */
     list-style: none;
-    justify-content: center;
-    margin: 20px 0; /* Adjust for spacing above/below the tabs */
-    padding: 0px;
+    margin: 20px 0; /* Add spacing above and below */
+    padding: 0;
 }
 
 .tabs-menu ul li {
-    margin: 0 30px; /* Adjust spacing between tabs */
+    margin: 0 20px; /* Adjust spacing between tabs */
 }
 
 .tabs-menu ul li a {
     text-decoration: none;
-    color: #000000;
+    font-family: 'BodyFont', Arial, sans-serif;
+    color: #000; /* Text color */
     font-size: 1rem;
-    transition: color 0.3s ease, font-weight 0.3s ease;
+    font-weight: normal;
+    transition: font-weight 0.3s ease, text-decoration 0.3s ease;
 }
 
 .tabs-menu ul li a:hover {
-    color: #000;
-    font-weight: 800;
+    font-weight: bold;
     text-shadow: 0.3px 0.3px 0 #000;
+    text-decoration: none;
 }
 
 .tabs-menu ul li a.active {
-    font-weight: bold;
-    color: #000;
-    text-shadow: 0.5px 0.5px 0 #000;
-    border-bottom: 0;
+    font-weight: bold; /* Keep bold for active tab */
+    text-shadow: 0.3px 0.3px 0 #000;
+    text-decoration: underline; /* Underline the active tab */
 }
+
 
 
 #projects-grid {
