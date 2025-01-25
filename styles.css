@@ -178,8 +178,9 @@ header nav ul li a:hover {
     text-decoration: none;
     color: var(--primary-color);
     font-size: 1rem;
+    font-family: 'BodyFont', Arial, sans-serif;
     font-weight: bold;
-    transition: var(--hover-color) 0.4s ease, color 0.4s ease;
+    transition: color 0.4s ease;
 }
 
 .hero button:hover {
