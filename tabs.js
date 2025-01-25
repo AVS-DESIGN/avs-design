@@ -1,24 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.tabs-menu .tab');
-    const tabContents = document.querySelectorAll('.tab-content');
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all tab buttons
+    const tabButtons = document.querySelectorAll(".tab-button");
 
-    tabs.forEach((tab) => {
-        tab.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent page refresh
-            // Remove active class from all tabs and hide content
-            tabs.forEach((tab) => tab.classList.remove('active'));
-            tabContents.forEach((content) => content.style.display = 'none');
+    // Add event listeners to all tab buttons
+    tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Get the target tab content ID
+            const tabId = button.getAttribute("data-tab");
 
-            // Add active class to clicked tab and show related content
-            tab.classList.add('active');
-            const target = tab.dataset.target;
-            document.querySelector(`#${target}`).style.display = 'grid';
+            // Deactivate all buttons and hide all contents
+            tabButtons.forEach(btn => btn.classList.remove("active"));
+            document.querySelectorAll(".tab-content").forEach(content => {
+                content.style.display = "none";
+            });
+
+            // Activate the clicked button and display the corresponding tab content
+            button.classList.add("active");
+            document.getElementById(tabId).style.display = "grid";
         });
     });
-
-    // Set default tab as active
-    const defaultTab = document.querySelector('.tabs-menu .tab.active');
-    if (defaultTab) {
-        document.querySelector(`#${defaultTab.dataset.target}`).style.display = 'grid';
-    }
 });

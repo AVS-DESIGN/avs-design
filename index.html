@@ -43,36 +43,83 @@
         <h2>Projects</h2>
         <p>Explore my projects, which range from product design to visual computing and freelance collaborations. Each piece reflects my commitment to creating meaningful designs that enhance everyday experiences.</p>
         
+        <!-- Tabs Navigation -->
+         <div class="tabs">
+            <button class="tab-button active" data-tab="highlights">Highlights</button>
+            <button class="tab-button" data-tab="product-design">Product Design</button>
+            <button class="tab-button" data-tab="urban-design">Urban Design</button>
+            <button class="tab-button" data-tab="digital-design">Digital Design</button>
+            <button class="tab-button" data-tab="workshops">Workshops</button>
+        </div>
         
-        <div id="projects-grid">
-            <div class="project-block">
-                <img src="images/product-design.jpg" alt="Product Design">
-                <div class="overlay">Product Design</div>
+
+        <!-- Tab Highlights -->
+         <div class="tab-content" id="highlights" style="display: grid;">
+            <!-- Grid -->
+            <!-- Highlight 1 -->
+             <div class="project-block">
+                <img src="images/product-design.jpg" alt="Product Design: Inline Table Lamp">
+                <div class="overlay">Inline</div>
             </div>
+             <!-- Highlight 2 -->
             <div class="project-block">
-                <img src="images/urban-design.jpg" alt="Urban Design">
-                <div class="overlay">Urban Design</div>
+                <img src="images/urban-design.jpg" alt="Urban Design: Flava">
+                <div class="overlay">Flava</div>
             </div>
-            <div class="project-block">
-                <img src="images/prototyping.jpg" alt="Prototyping">
-                <div class="overlay">Prototyping</div>
+            <!-- Add more -->
+        </div>
+        
+
+        <!-- Tab Product Design -->
+        <div class="tab-content" id="product-design" style="display: none;">
+            <!-- Grid -->
+            <!-- Product Design 1-->
+             <div class="project-block">
+                <img src="images/product-design.jpg" alt="Product Design 1">
+                <div class="overlay">Product Design 1</div>
             </div>
-            <div class="project-block">
-                <img src="images/corporate-design.jpg" alt="Corporate Design">
-                <div class="overlay">Corporate Design</div>
+            <!-- Add more -->
+        </div>
+        
+
+        <!-- Tab Urban Design -->
+        <div class="tab-content" id="urban-design" style="display: none;">
+            <!-- Grid -->
+            <!-- Urban Design 1-->
+             <div class="project-block">
+                <img src="images/urban-design.jpg" alt="Urban Design 1">
+                <div class="overlay">Urban Design 1</div>
+            </div><!-- Add more -->
+        </div>
+        
+        
+        
+        <!-- Tab Digital Design -->
+        <div class="tab-content" id="digital-design" style="display: none;">
+            <!-- Grid -->
+            <!-- Digital Design 1-->
+             <div class="project-block">
+                <img src="images/digital-design.gif" alt="Digital Design 1">
+                <div class="overlay">Digital Design 1</div>
             </div>
-            <div class="project-block">
-                <img src="images/digital-design.gif" alt="Digital Design">
-                <div class="overlay">Digital Design</div>
+            <!-- Add more -->
+        </div>
+        
+        
+        <!-- Tab Workshops -->
+        <div class="tab-content" id="workshops" style="display: none;">
+            <!-- Grid -->
+            <!-- Workshop 1-->
+             <div class="project-block">
+                <img src="images/workshops.jpg" alt="Workshops 1">
+                <div class="overlay">Workshops 1</div>
             </div>
-            <div class="project-block">
-                <img src="images/workshops.jpg" alt="Workshops">
-                <div class="overlay">Workshops</div>
-            </div>
+            <!-- Add more blocks as needed -->
         </div>
         
     </section>
 
+    
     <section class="section" id="contact">
         <h2>Contact</h2>
         <p>contact@avs-design.de</p>
@@ -83,7 +130,8 @@
     </footer>
 
     
-    <script src="js/tabs.js"></script>
+    <script src="tabs.js"></script>
+
 
     
 </body>

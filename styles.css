@@ -154,16 +154,16 @@ header nav ul li a:hover {
     list-style: none;
     justify-content: center;
     margin: 20px 0; /* Adjust for spacing above/below the tabs */
-    padding: 0;
+    padding: 0px;
 }
 
 .tabs-menu ul li {
-    margin: 0 10px; /* Adjust spacing between tabs */
+    margin: 0 30px; /* Adjust spacing between tabs */
 }
 
 .tabs-menu ul li a {
     text-decoration: none;
-    color: #000;
+    color: #000000;
     font-size: 1rem;
     transition: color 0.3s ease, font-weight 0.3s ease;
 }
@@ -178,7 +178,7 @@ header nav ul li a:hover {
     font-weight: bold;
     color: #000;
     text-shadow: 0.5px 0.5px 0 #000;
-    border-bottom: 2px solid #000; /* Optional: Highlight active tab */
+    border-bottom: 0;
 }
 
 
