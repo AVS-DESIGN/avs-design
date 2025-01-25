@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --hover-color: #f6f6f6;
+    --border-color: #ccc;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,8 +27,8 @@
 
 body {
     font-family: 'BodyFont', Arial, sans-serif;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -38,7 +45,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
 }
 
 header .logo {
@@ -82,15 +89,15 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: var(--primary-color);
     font-size: 1rem;
     transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #000;
+    color: var(--primary-color);
     font-weight: 800;
-    text-shadow: 0.3px 0.3px 0 #000;
+    text-shadow: 0.3px 0.3px 0 var(--primary-color);
 }
 
 .hero {
@@ -100,7 +107,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f6f6f6;
+    background-color: var(--hover-color);
 }
 
 .hero h1 {
@@ -118,23 +125,23 @@ header nav ul li a:hover {
     display: inline-block;
     margin-top: 30px;
     padding: 10px 30px;
-    border: 2px solid #000;
+    border: 2px solid var(--primary-color);
     border-radius: 50px;
     text-decoration: none;
-    color: #000;
+    color: var(--primary-color);
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .hero a:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .section {
     padding: 60px 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .section h2 {
@@ -147,8 +154,6 @@ header nav ul li a:hover {
     font-size: 1rem;
     margin-bottom: 20px;
 }
-
-
 
 .tabs-menu ul {
     display: flex;
@@ -165,7 +170,7 @@ header nav ul li a:hover {
 .tabs-menu ul li a {
     text-decoration: none;
     font-family: 'BodyFont', Arial, sans-serif;
-    color: #000;
+    color: var(--primary-color);
     font-size: 1rem;
     font-weight: normal;
     text-transform: none;
@@ -178,18 +183,16 @@ header nav ul li a:hover {
 
 .tabs-menu ul li a:hover {
     font-weight: bold;
-    text-shadow: 0.3px 0.3px 0 #000;
+    text-shadow: 0.3px 0.3px 0 var(--primary-color);
     text-decoration: none;
 }
 
 .tabs-menu ul li a.active {
     font-weight: bold; /* Keep bold for active tab */
-    text-shadow: 0.3px 0.3px 0 #000;
+    text-shadow: 0.3px 0.3px 0 var(--primary-color);
     text-decoration: none;
     text-transform: none;
 }
-
-
 
 #projects-grid {
     display: grid;
@@ -213,6 +216,7 @@ header nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
+    will-change: transform;
 }
 
 .project-block .overlay {
@@ -222,7 +226,7 @@ header nav ul li a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,8 +253,8 @@ header nav ul li a:hover {
 footer {
     padding: 20px 40px;
     text-align: center;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 footer p {
@@ -259,10 +263,14 @@ footer p {
 
 footer a {
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
     font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+footer a:focus {
+    outline: 2px dashed var(--secondary-color);
 }
