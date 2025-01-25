@@ -133,7 +133,43 @@ header nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-.hero a {
+.hero nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+}
+
+.hero nav ul li {
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .hero nav ul li {
+        margin: 10px 0;
+    }
+}
+
+.hero nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.hero nav ul li a:hover {
+    color: var(--primary-color);
+    font-weight: 800;
+    text-shadow: 0.3px 0.3px 0 var(--primary-color);
+}
+
+.hero button {
     display: inline-block;
     margin-top: 30px;
     padding: 10px 30px;
@@ -146,7 +182,7 @@ header nav ul li a:hover {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.hero a:hover {
+.hero button:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
