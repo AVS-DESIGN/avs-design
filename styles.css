@@ -48,16 +48,6 @@ header {
     border-bottom: 1px solid var(--border-color);
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-family: 'HeaderFont', Arial, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    line-height: 1.5rem;
-    display: flex;
-    align-items: center;
-}
 
 .logo {
     display: flex;
@@ -73,6 +63,16 @@ header .logo {
 .logo img {
     height: 20px; /* Adjust image size as needed */
     margin: 10px; /* Ensure no extra space around the image */
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-family: 'HeaderFont', Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.5rem;
+    color: var(--primary-color); /* Ensure text color matches design */
 }
 
 
