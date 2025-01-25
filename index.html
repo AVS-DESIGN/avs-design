@@ -38,7 +38,7 @@
      <!-- WELCOME -->
     <section class="hero">
         <h1>Think Outside the Box.</h1>
-        <p id="typewriter">_My Take on Design.</p>
+        <p class="typewriter">_My Take on Design.</p>
         <button href="#projects">View Projects</button>
     </section>
 
@@ -188,12 +188,13 @@
     </footer>
 
     <!-- Javascript -->
-     
+
     <!-- Typewriter -->
     <script src="/scripts/typewriter.js"></script>
     <script>
-        typewriterEffect("typewriter", 100); // element ID and speed
-    </script>
+    // Apply the typewriter effect to all elements with the 'typewriter' class
+    typewriterEffectMultiple(".typewriter", 100);
+</script>
     <!-- Tabs -->
     <script src="tabs.js"></script>
 

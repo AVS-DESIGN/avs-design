@@ -1,17 +1,20 @@
-function typewriterEffect(elementId, typingSpeed = 100) {
-    const element = document.getElementById(elementId);
-    const text = element.textContent.trim(); // Use the existing text in the element
-    element.textContent = ""; // Clear the content to start the animation
+function typewriterEffectMultiple(selector, speed) {
+    const elements = document.querySelectorAll(selector);
+    
+    elements.forEach((element) => {
+        const text = element.textContent; // Get the text of each element
+        element.textContent = ""; // Clear the element's content
 
-    let index = 0;
+        let index = 0;
 
-    function type() {
-        if (index < text.length) {
-            element.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, typingSpeed);
+        function typeCharacter() {
+            if (index < text.length) {
+                element.textContent += text.charAt(index); // Add one character at a time
+                index++;
+                setTimeout(typeCharacter, speed);
+            }
         }
-    }
 
-    type();
+        typeCharacter();
+    });
 }
